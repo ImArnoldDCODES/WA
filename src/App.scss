@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  height: 100vh;
+}
+
+.App {
+  height: 88vh;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 1% 0;
+  .section-1 {
+    width: 60%;
+    .upper-card {
+      width: 100%;
+      display: flex;
+      div {
+        height: 8vh;
+      }
+      .upper-card-1 {
+        width: 60%;
+        border: 2px solid black;
+        border-radius: 14px;
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        h4,
+        h5 {
+          margin: 0;
+          width: fit-content;
+          height: fit-content;
+          border: none;
+        }
+        h4 {
+          font-family: "Days One", sans-serif;
+        }
+        h5 {
+          text-transform: uppercase;
+          font-family: "IBM Plex Mono", monospace;
+        }
+      }
+      .upper-card-2 {
+        width: 40%;
+        border: 2px solid black;
+        border-radius: 14px;
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        > * {
+          border: none;
+        }
+        h5 {
+          margin: 0;
+          width: fit-content;
+          height: fit-content;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-family: 'IBM Plex Mono', monospace;
+        }
+      }
+    }
+    .container {
+      border: 2px solid black;
+      height: 100%;
+      overflow-y: scroll;
+      border-radius: 18px;
+      background: #fff;
+      padding: 0% 8%;
+      > * {
+        margin: 0;
+        padding: 0;
+      }
+      h2 {
+        margin-top: 2rem;
+        font-size: 9vw;
+        text-transform: uppercase;
+      }
+      h4 {
+        font-size: 9vw;
+        display: flex;
+        text-transform: uppercase;
+        p {
+          font-size: 1.5vw;
+          margin-left: 1rem;
+        }
+      }
+      .content {
+        div {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          span {
+            width: 15%;
+          }
+          hr {
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+          }
+        }
+        .background {
+          width: 100%;
+          height: 30vh;
+          margin-top: 1rem;
+          img {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: contain;
+            border-radius: 15px;
+          }
+        }
+        .image-text {
+          h5 {
+            text-transform: uppercase;
+            font-weight: normal;
+          }
+        }
+        .btn {
+          width: 100%;
+          margin-bottom: 3rem;
+          button {
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            text-align: end;
+            font-size: 28px;
+            height: 4rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1rem;
+            padding-right: 2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+
+          }
+        }
+      }
+    }
+  }
+  .section-2 {
+    width: 40%;
+    .upper-card-3 {
+      width: auto;
+      height: 8vh;
+      border: 2px solid black;
+      border-radius: 14px;
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      h5 {
+        text-transform: uppercase;
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      div {
+        border: none;
+        display: flex;
+        align-items: center;
+        .dot {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        > * {
+          border: none;
+        }
+      }
+    }
+    .container {
+      border: 2px solid black;
+      height: 100%;
+      border-radius: 18px;
+      background: #fff;
+      overflow-y: scroll;
+      .date {
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 7%;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+      }
+      .img-border {
+        border: 2px solid black;
+        width: 68%;
+        height: 16rem;
+        border-radius: 10px;
+        transform: rotate(-20deg);
+        margin: auto;
+        img {
+          border-radius: 10px;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: -1rem;
+          left: -1rem;
+        }
+      }
+      .price {
+        .objects {
+          display: flex;
+          // margin-top: 4rem;
+          margin: 5rem auto auto auto;
+          width: 85%;
+          justify-content: space-between;
+          text-transform: uppercase;
+          h4 {
+            font-size: 22px;
+          }
+          div {
+            h5 {
+              font-weight: normal;
+              font-size: 14px;
+              text-align: end;
+            }
+          }
+        }
+        hr {
+          width: 85%;
+        }
+        .total {
+          width: 85%;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          text-transform: uppercase;
+          > * {
+            margin: 0;
+          }
+          h6 {
+            font-size: 18px;
+            font-weight: normal;
+          }
+          h3 {
+            font-size: 40px;
+          }
+        }
+        .btns {
+          width: 85%;
+          margin: 2rem auto 2rem auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            font-size: 22px;
+          }
+          button {
+            height: 5rem;
+            width: 5rem;
+            background: #000;
+            border-radius: 10px;
+            color: #fff;
+            border: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

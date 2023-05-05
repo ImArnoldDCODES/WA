@@ -32,17 +32,14 @@ function App() {
       tl.current = gsap.timeline()
         .from(".upper-card-1", 1.8, {
           ease: Power4.easeInOut,
-          opacity: 0,
           y: -100
         })
         .from(".upper-card-2", 1.5, {
           ease: Power4.easeInOut,
-          opacity: 0,
           y: -100
         }, "-=1")
         .from(".upper-card-3", 1.5, {
           ease: Power4.easeInOut,
-          opacity: 0,
           y: -100
         }, "-=1")
         .from(".container", 1.5, {

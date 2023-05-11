@@ -2,27 +2,13 @@ import './App.scss';
 import { useRef, useEffect, useState } from 'react';
 import { MdWbSunny } from "react-icons/md"
 import { GoPrimitiveDot } from "react-icons/go"
-import { BsArrowRight } from "react-icons/bs"
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
-import { Tilt } from 'react-tilt'
 import { Power4, Power3, Elastic } from 'gsap/gsap-core';
 import gsap from 'gsap';
-import Bg from "../src/images/bg.jpg"
-import Bg2 from "../src/images/bg-icon.jpg"
+import SpaceImage from './component/getSpaceImgs';
+import { GetImage } from './component/getImage';
 
 function App() {
   const [bgTheme, setBgTheme] = useState(false)
-
-  const defaultOptions = {
-    reverse: true,
-    max: 15,
-    perspective: 1000,
-    speed: 1000,
-    transition: true,
-    axis: null,
-    reset: true,
-    easing: "cubic-bezier(.03,.98,.72,.99)",
-  }
 
   const tl = useRef()
 
@@ -80,28 +66,7 @@ function App() {
             <h4>Dali
               <p>Surrealism</p>
             </h4>
-            <div className='content'>
-              <div>
-                <span>05 / 1904</span>
-                <hr />
-                <span>01 / 1989</span>
-              </div>
-              <div className='background'>
-                <img src={Bg} alt="bg" />
-              </div>
-              <div className='image-text'>
-                <h5>
-                  Nationality: Space <br />
-                  Field: Photography, Painting, Drawing <br />
-                  Pupils: Carlos Quizpez Asin
-                </h5>
-              </div>
-              <div className='btn'>
-                <button>Next Artist
-                  <BsArrowRight size={40} />
-                </button>
-              </div>
-            </div>
+            <SpaceImage />
           </div>
         </div>
         <div className='section-2'>
@@ -112,44 +77,7 @@ function App() {
               <GoPrimitiveDot size={22} className="dot" />
             </div>
           </div>
-          <div className='container2'>
-            <div className='date'>
-              <h5>1929 / 1940</h5>
-              <h5>110X150.7CM</h5>
-            </div>
-            <div className='img-border'>
-              <Tilt options={defaultOptions} style={{ height: "100%", width: "100%" }}>
-                <img src={Bg2} alt="bg2" />
-              </Tilt>
-            </div>
-            <div className='price'>
-              <div className='objects'>
-                <h4>The Prasistence <br /> of memory</h4>
-                <div>
-                  <h5>
-                    Date: 1939<br />
-                    Style: Surrealism<br />
-                    Genre: Symbolic Painting<br />
-                    Media: Space
-                  </h5>
-                </div>
-              </div>
-              <hr />
-              <div className='total'>
-                <h6>Price</h6>
-                <h3>$18.680</h3>
-              </div>
-              <div className='btns'>
-                <button>
-                  <IoIosArrowBack size={32} />
-                </button>
-                <span>182</span>
-                <button>
-                  <IoIosArrowForward size={32} />
-                </button>
-              </div>
-            </div>
-          </div>
+          <GetImage />
         </div>
       </div>
     </div>

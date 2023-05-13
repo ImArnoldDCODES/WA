@@ -9,7 +9,6 @@ import { GetImage } from './component/getImage';
 
 function App() {
   const [bgTheme, setBgTheme] = useState(false)
-
   const tl = useRef()
 
   useEffect(() => {

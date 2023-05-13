@@ -332,3 +332,32 @@ body {
     }
   }
 }
+
+// @media screen and (max-width: 600px) {
+//   .section-1 {
+//     margin-top: 200% !important;
+//   }
+// }
+
+// @media screen and (max-width: 950px) {
+//   body {
+//     overflow-y: scroll;
+//   }
+//   .App {
+//     display: flex;
+//     flex-direction: column;
+//     .upper-card {
+//       margin-top: 100%;
+//     }
+//     .section-1 {
+//       margin-top: 15rem;
+//     }
+//     .section-1,
+//     .section-2 {
+//       width: 100%;
+//     }
+//     .btns {
+//       margin: 3rem auto 0 auto !important;
+//     }
+//   }
+// }

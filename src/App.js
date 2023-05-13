@@ -46,7 +46,6 @@ function App() {
     return () => ctx.revert()
   }, [])
 
-  console.log(bgTheme === true, "checkTrue")
   return (
     <div className={bgTheme === true ? "light" : "dark"} id="theme">
       <div className="App">

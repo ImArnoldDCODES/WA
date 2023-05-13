@@ -10,6 +10,7 @@ export const GetImage = () => {
     const [page, setPage] = useState(1);
 
 
+
     const defaultOptions = {
         reverse: true,
         max: 15,
@@ -24,16 +25,16 @@ export const GetImage = () => {
 
     useEffect(() => {
         fetchImages();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page]);
 
     const fetchImages = async () => {
+        const imgAuth = process.env.REACT_APP_IMAGES_AUTH
         try {
             const response = await axios.get(
-                `https://api.unsplash.com/photos/?client_id=XtRjO7cbRzkg6tgun5e9tdtflaNH-2djlsAsYm2C46I&page=${page}`
+                `https://api.unsplash.com/photos/?client_id=${imgAuth}&page=${page}`
             );
             setImages(response.data);
-            console.log(response.data, "images")
         } catch (error) {
             console.log(error);
         }
@@ -48,9 +49,6 @@ export const GetImage = () => {
             setPage(page - 1);
         }
     };
-
-    console.log(images, "images2")
-
 
     return (
         <div className='container2'>

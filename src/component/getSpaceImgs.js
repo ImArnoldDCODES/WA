@@ -10,16 +10,17 @@ const SpaceImage = () => {
 
     useEffect(() => {
         fetchVideos();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page]);
 
     const fetchVideos = async () => {
+    const spaceAuth = process.env.REACT_APP_SPACE_AUTH
         try {
             const response = await axios.get(
                 `https://api.pexels.com/videos/search?query=space&per_page=1&page=${page}`,
                 {
                     headers: {
-                        Authorization: 'idq0moI2xOVzp8BdscLXAQSpVlA6wnaKs0cQrOogCKgCT7YcI54R9mTA',
+                        Authorization: spaceAuth,
                     },
                 }
             );

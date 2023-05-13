@@ -47,7 +47,7 @@ function App() {
   }, [])
 
   return (
-    <div className={bgTheme === true ? "light" : "dark"} id="theme">
+    <div>
       <div className="App">
         <div className='section-1'>
           <div className='upper-card'>

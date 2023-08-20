@@ -8,7 +8,22 @@ import SpaceImage from './component/getSpaceImgs';
 import { GetImage } from './component/getImage';
 
 function App() {
-  const [bgTheme, setBgTheme] = useState(false)
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+  };
+
   const tl = useRef()
 
   useEffect(() => {
@@ -44,7 +59,7 @@ function App() {
     })
     return () => ctx.revert()
   }, [])
-  
+
 
   return (
     <div>
@@ -57,7 +72,7 @@ function App() {
             </div>
             <div className='upper-card-2'>
               <h5>Menu</h5>
-              <MdWbSunny size={22} className='sunny' onClick={() => setBgTheme(!bgTheme)} />
+              <MdWbSunny size={22} className='sunny' onClick={toggleTheme} />
             </div>
           </div>
           <div className='container'>

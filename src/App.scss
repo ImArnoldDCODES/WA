@@ -6,11 +6,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
 
+:root {
+  --main-bg: #000;
+  --bg-color: #c5c2c2;
+  --text-color: #000;
+  --border-color: #000;
+}
+[data-theme="dark"] {
+  --main-bg: #fff;
+  --bg-color: #696969;
+  --text-color: #fff;
+  --border-color: #fff;
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: #000;
+  background: var(--main-bg);
   height: 100vh;
 }
 
@@ -31,9 +44,10 @@ body {
       }
       .upper-card-1 {
         width: 60%;
-        border: 2px solid black;
+        border: 2px solid var(--border-color);
+        color: var(--text-color);
         border-radius: 14px;
-        background: #fff;
+        background: var(--bg-color);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -66,9 +80,10 @@ body {
       }
       .upper-card-2 {
         width: 40%;
-        border: 2px solid black;
+        border: 2px solid var(--border-color);
         border-radius: 14px;
-        background: #fff;
+        background: var(--bg-color);
+        color: var(--text-color);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -78,7 +93,7 @@ body {
           border-radius: 10px;
           &:hover {
             background: #000;
-            color: #fff;
+            color: var(--bg-color);
           }
         }
         > * {
@@ -95,11 +110,12 @@ body {
       }
     }
     .container {
-      border: 2px solid black;
+      border: 2px solid var(--border-color);
       height: 100%;
       overflow-y: scroll;
       border-radius: 18px;
-      background: #fff;
+      background: var(--bg-color);
+      color: var(--text-color);
       padding: 0% 8%;
       font-family: "Roboto Mono", monospace;
       > * {
@@ -203,9 +219,10 @@ body {
     .upper-card-3 {
       width: auto;
       height: 8vh;
-      border: 2px solid black;
+      border: 2px solid var(--border-color);
       border-radius: 14px;
-      background: #fff;
+      background: var(--bg-color);
+      color: var(--text-color);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -228,10 +245,11 @@ body {
       }
     }
     .container2 {
-      border: 2px solid black;
+      border: 2px solid var(--border-color);
       height: 100%;
       border-radius: 18px;
-      background: #fff;
+      background: var(--bg-color);
+      color: var(--text-color);
       overflow-y: scroll;
       .date {
         height: fit-content;

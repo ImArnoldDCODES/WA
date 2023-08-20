@@ -14,7 +14,7 @@ const SpaceImage = () => {
     }, [page]);
 
     const fetchVideos = async () => {
-    const spaceAuth = process.env.REACT_APP_SPACE_AUTH
+        const spaceAuth = process.env.REACT_APP_SPACE_AUTH
         try {
             const response = await axios.get(
                 `https://api.pexels.com/videos/search?query=space&per_page=1&page=${page}`,
